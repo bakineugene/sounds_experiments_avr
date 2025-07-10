@@ -15,7 +15,11 @@ def wav_to_progmem(sound_name):
             
             with open("build/sounds/" + sound_name + ".h", 'w') as f:
                 f.write(f"#define SOUND_{sound_name.upper()}_LENGTH {len(data)}\n")
+                f.write(f"#if defined(__AVR__)\n")
+                f.write(f"const uint8_t SOUND_{sound_name.upper()}_DATA[SOUND_{sound_name.upper()}_LENGTH] PROGMEM = {{\n")
+                f.write(f"#else\n")
                 f.write(f"const uint8_t SOUND_{sound_name.upper()}_DATA[SOUND_{sound_name.upper()}_LENGTH] = {{\n")
+                f.write(f"#endif\n")
                 
                 for i in range(0, len(data), 16):
                     chunk = data[i:i+16]

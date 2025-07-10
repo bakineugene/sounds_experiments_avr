@@ -6,6 +6,9 @@
 #include "build/sounds/dzin.h"
 #include "build/sounds/bump.h"
 #include "build/sounds/hi.h"
+#include "build/sounds/spoon.h"
+#include "build/sounds/spoon2.h"
+#include "build/sounds/click.h"
 
 const int SAMPLE_RATE = 8000;
 const int BUFFER_SIZE = 8000;
@@ -28,14 +31,17 @@ SDL_AudioDeviceID deviceId = SDL_OpenAudioDevice(NULL, 0, &spec, NULL, 0);
 
 SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
 SDL_QueueAudio(deviceId, SOUND_BUMP.start, SOUND_BUMP.length);
-SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
-SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
-SDL_QueueAudio(deviceId, SOUND_BUMP.start, SOUND_BUMP.length);
+SDL_QueueAudio(deviceId, SOUND_SPOON.start, SOUND_SPOON.length);
+SDL_QueueAudio(deviceId, SOUND_SPOON2.start, SOUND_SPOON2.length);
+SDL_QueueAudio(deviceId, SOUND_CLICK.start, SOUND_CLICK.length);
 SDL_QueueAudio(deviceId, SOUND_HI.start, SOUND_HI.length);
 SDL_QueueAudio(deviceId, SOUND_BUMP.start, SOUND_BUMP.length);
 SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
 SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
 SDL_QueueAudio(deviceId, SOUND_BUMP.start, SOUND_BUMP.length);
+SDL_QueueAudio(deviceId, SOUND_SPOON.start, SOUND_SPOON.length);
+SDL_QueueAudio(deviceId, SOUND_SPOON2.start, SOUND_SPOON2.length);
+SDL_QueueAudio(deviceId, SOUND_CLICK.start, SOUND_CLICK.length);
 SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
 SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
 SDL_QueueAudio(deviceId, SOUND_HI.start, SOUND_HI.length);
@@ -46,6 +52,9 @@ SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
 SDL_QueueAudio(deviceId, SOUND_BUMP.start, SOUND_BUMP.length);
 SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
 SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
+SDL_QueueAudio(deviceId, SOUND_SPOON.start, SOUND_SPOON.length);
+SDL_QueueAudio(deviceId, SOUND_SPOON2.start, SOUND_SPOON2.length);
+SDL_QueueAudio(deviceId, SOUND_CLICK.start, SOUND_CLICK.length);
 SDL_QueueAudio(deviceId, SOUND_BUMP.start, SOUND_BUMP.length);
 SDL_QueueAudio(deviceId, SOUND_BUMP.start, SOUND_BUMP.length);
 SDL_QueueAudio(deviceId, SOUND_DZIN.start, SOUND_DZIN.length);
